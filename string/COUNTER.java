@@ -1,7 +1,7 @@
 package string;
 import java.util.Scanner;
 public class COUNTER {
-	    public static String checkCharType(char ch) {
+	    public static String check(char ch) {
 	        if (ch >= 'A' && ch <= 'Z') {
 	            ch = (char) (ch + 32); 
 	        }
@@ -15,11 +15,11 @@ public class COUNTER {
 	            return "Not a Letter";
 	        }
 	    }
-	    public static int[] countVowelsAndConsonants(String str) {
+	    public static int[] count(String str) {
 	        int[] counts = new int[2];
 	        for (int i = 0; i < str.length(); i++) {
 	            char ch = str.charAt(i);
-	            String charType = checkCharType(ch);
+	            String charType = check(ch);
 	            if (charType.equals("Vowel")) {
 	                counts[0]++;
 	            } else if (charType.equals("Consonant")) {
@@ -30,12 +30,9 @@ public class COUNTER {
 	    }
 	    public static void main(String[] args) {
 	        Scanner scanner = new Scanner(System.in);
-
 	        System.out.print("Enter a string: ");
 	        String inputString = scanner.nextLine();
-
-	        int[] result = countVowelsAndConsonants(inputString);
-
+	        int[] result = count(inputString);
 	        System.out.println("Number of Vowels: " + result[0]);
 	        System.out.println("Number of Consonants: " + result[1]);
 	    }
