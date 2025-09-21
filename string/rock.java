@@ -23,8 +23,10 @@ public class rock {
 	                   (userChoice.equalsIgnoreCase("Paper") && computerChoice.equalsIgnoreCase("Rock")) ||
 	                   (userChoice.equalsIgnoreCase("Scissors") && computerChoice.equalsIgnoreCase("Paper"))) {
 	            return "Player";
-	        } else {
-	            return "Computer";
+	        }
+	        else {
+	        	return " " ;
+	        }
 	        }
 	    public static String[][] getGameStats(int userWins, int computerWins, int totalGames) {
 	        double userWinPercentage = (double) userWins / totalGames * 100;
@@ -66,7 +68,7 @@ public class rock {
 
 	        System.out.print("Enter the number of games you want to play: ");
 	        int numGames = scanner.nextInt();
-	        scanner.nextLine(); // Consume newline
+	        scanner.nextLine(); 
 
 	        int playerWins = 0;
 	        int computerWins = 0;
@@ -88,12 +90,10 @@ public class rock {
 	            } else if (winner.equals("Computer")) {
 	                computerWins++;
 	            }
-
 	            gameResults[i][0] = userChoice;
 	            gameResults[i][1] = computerChoice;
 	            gameResults[i][2] = winner;
 	        }
-
 	        String[][] finalStats = getGameStats(playerWins, computerWins, numGames);
 	        displayResults(gameResults, finalStats, numGames);
 
