@@ -41,8 +41,7 @@ public class employ {
 	        System.out.println("Manager-specific salary modification logic applied.");
 	        super.modifySalary(newSalary); 
 	    }
-	}
-	public class Main{
+		public class Main{
 	    public static void main (String[] args) {
 	        employ emp1 = new employ("E001", "HR", 60000.0);
 	        emp1.displayEmployeeDetails();
@@ -55,5 +54,6 @@ public class employ {
 	        mgr1.displayManagerDetails();
 	        System.out.println("\nAccessing public field from Main: " + emp1.employeeId);
 	    }
+		}
 	}
 	
